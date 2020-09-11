@@ -30,7 +30,7 @@ This is not an existing open source project so the group will just create the we
 
 **URL:** 
 
-
+https://github.com/jakemcannon/3308_spotify_project
 
 **Running:**
 
