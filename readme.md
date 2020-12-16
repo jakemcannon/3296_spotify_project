@@ -49,51 +49,45 @@ https://github.com/jakemcannon/3308_spotify_project
 
 **Running:**
 
-- Clone this repo
-
-- Build your base Python/Flask image:
+Currently, when you make any code changes you must stop your containers and start them again with this command for the changes to take effect. Next step is to look into solving this with live-reloading.
 
 ```
-docker build -t 3296_spotify_project .
-```
-
-- Run a container based on your image:
-
-```
-docker run -d --name 3296_spotify_project -p 80:80 3296_spotify_project
-```
-
-- Navigate to localhost at
-
-```
-http://127.0.0.1/
-```
-
-- To shut down the container
-
-```
-docker container stop 3296_spotify_project
-```
-
-- To start a previously shut down container
-
-```
-docker start 3296_spotify_project
+docker-compose up --build
 ```
 
 
 
-More detailed explantion [here](https://github.com/tiangolo/uwsgi-nginx-flask-docker)
+**Stopping Docker containers:**
+
+```
+docker-compose down
+```
 
 
 
-## Required Resources
+**Manual Docker commands if compose is not working correctly**
 
-- ?
+Build the image
+
+```
+docker build -t flask_docker_demo .
+```
+
+Run the container
+
+```
+docker run -p 5000:5005 flask_docker_demo
+```
+
+
 
 
 
 ## Other Resources
+
+Similar site that deals with Spotify OAuth2 authentication and user-to-user matching. Not exactly the same since it does not *generate* playlists but similar in that it measures similarities between two users.
+
+- https://musictaste.space/
 
 Similar Spotify features/problems others have already sovled/worked on
 
