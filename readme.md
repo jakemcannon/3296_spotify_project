@@ -49,8 +49,18 @@ https://github.com/jakemcannon/3308_spotify_project
 
 **Running:**
 
+Currently, when you make any code changes you must stop your containers and start them again with this command for the changes to take effect. Next step is to look into solving this with live-reloading.
+
 ```
 docker-compose up --build
+```
+
+
+
+**Stopping Docker containers:**
+
+```
+docker-compose down
 ```
 
 
