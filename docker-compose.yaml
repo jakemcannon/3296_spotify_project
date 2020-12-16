@@ -1,0 +1,7 @@
+version: '3'
+services:
+  flask:
+    build: .
+    image: flask_docker_demo:latest
+    ports:
+      - 5000:5005
