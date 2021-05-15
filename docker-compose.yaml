@@ -1,7 +1,17 @@
 version: '3'
+
 services:
-  flask:
-    build: .
-    image: flask_docker_demo:latest
+
+  client:
+    container_name: react-frontend
+    build:
+      context: ./client
+      dockerfile: Dockerfile
     ports:
-      - 5000:5005
+      - 3000:3005
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
